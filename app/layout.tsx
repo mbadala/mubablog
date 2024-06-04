@@ -11,9 +11,15 @@ import { baseUrl } from './sitemap'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'MUBADALA',
+    template: '%s | MUBADALA',
   },
+  icons: [{ rel: "icon", type: "image/png", sizes: "32x32", url: "/favicon-32x32.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", url: "/apple-touch-icon.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", url: "/favicon-16x16.png" },
+    { rel: "mask-icon", url: "//safari-pinned-tab.svg", color: "#5bbad5" },
+  ],
+  manifest: "/site.webmanifest",
   description: 'This is my portfolio.',
   openGraph: {
     title: 'My Portfolio',

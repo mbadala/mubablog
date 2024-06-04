@@ -1,5 +1,6 @@
 import fs from 'fs'
 import path from 'path'
+import * as console from "node:console";
 
 type Metadata = {
   title: string
@@ -87,4 +88,20 @@ export function formatDate(date: string, includeRelative = false) {
   }
 
   return `${fullDate} (${formattedDate})`
+}
+
+export function getToday(date_string: string | number | Date) {
+  const months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  let date = new Date();
+
+  console.log(date_string)
+  if (date_string) {
+    date = new Date(date_string);
+  }
+
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  return `${month} ${day},${year}`;
 }
